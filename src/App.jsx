@@ -11,23 +11,26 @@ import theme from './config/theme';
 
 import SideNav from './components/SideNav';
 import Header from './components/Header';
+import { ProSidebarProvider } from 'react-pro-sidebar';
 
 function App() {
 
   return (
     <React.Fragment>
       <ThemeProvider theme={theme}>
-        <CssBaseline />
+        <ProSidebarProvider>
+          <CssBaseline />
 
-        <Header />
+          <Header />
 
-        <Box sx={styles.container}>
-          <SideNav />
+          <Box sx={styles.container}>
+            <SideNav />
 
-          <Box component={'main'} sx={styles.mainSection}>
+            <Box component={'main'} sx={styles.mainSection}>
 
+            </Box>
           </Box>
-        </Box>
+        </ProSidebarProvider>
       </ThemeProvider>
     </React.Fragment>
   );
@@ -37,7 +40,7 @@ const styles = {
   container: {
     display: 'flex',
     bgcolor: 'neutral.light',
-    height: 'calc(100% - 64px)',
+    height: "calc(100vh - 64px)"
   },
   mainSection: {
     p: 1,
