@@ -8,10 +8,13 @@ import SourceOutlinedIcon from "@mui/icons-material/SourceOutlined";
 import AnalyticsOutlinedIcon from "@mui/icons-material/AnalyticsOutlined";
 
 import avatarImage from '../assets/images/avatar.jpg';
+import { Link, useLocation } from "react-router-dom";
 
 const SideNav = () => {
     const theme = useTheme();
     const { collapsed } = useProSidebar();
+
+    const location = useLocation();
 
     return (
         <Sidebar
@@ -34,25 +37,47 @@ const SideNav = () => {
             </Box>
 
             <Menu>
-                <MenuItem active="true" icon={<DashboardOutlinedIcon />} sx={styles.menuItem}>
+                <MenuItem
+                    component={Link}
+                    active={location.pathname === "/" ? "true" : "false"}
+                    to="/"
+                    sx={styles.menuItem}
+                >
                     <DashboardOutlinedIcon sx={collapsed ? styles.menuIconMobile : styles.menuIcon} />
                     {!collapsed && <Typography variant="body2" sx={styles.menuText}>Dashboard</Typography>}
                 </MenuItem>
 
-                <MenuItem icon={<StyleOutlinedIcon />} sx={styles.menuItem}>
+                <MenuItem
+                    component={Link}
+                    active={location.pathname === "/content" ? "true" : "false"}
+                    to="/content"
+                    sx={styles.menuItem}
+                >
                     <StyleOutlinedIcon sx={collapsed ? styles.menuIconMobile : styles.menuIcon} />
                     {!collapsed && <Typography variant="body2" sx={styles.menuText}>Content</Typography>}
                 </MenuItem>
-                <MenuItem icon={<AnalyticsOutlinedIcon />} sx={styles.menuItem}>
+
+                <MenuItem
+                    component={Link}
+                    active={location.pathname === "/analytics" ? "true" : "false"}
+                    to="/analytics"
+                    sx={styles.menuItem}
+                >
                     <AnalyticsOutlinedIcon sx={collapsed ? styles.menuIconMobile : styles.menuIcon} />
                     {!collapsed && <Typography variant="body2" sx={styles.menuText}>Analytics</Typography>}
                 </MenuItem>
-                <MenuItem icon={<SourceOutlinedIcon />} sx={styles.menuItem}>
+
+                <MenuItem
+                    component={Link}
+                    active={location.pathname === "/customization" ? "true" : "false"}
+                    to="/customization"
+                    sx={styles.menuItem}
+                >
                     <SourceOutlinedIcon sx={collapsed ? styles.menuIconMobile : styles.menuIcon} />
                     {!collapsed && <Typography variant="body2" sx={styles.menuText}>Customization</Typography>}
                 </MenuItem>
             </Menu>
-        </Sidebar>
+        </Sidebar >
     );
 }
 

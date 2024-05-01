@@ -12,6 +12,8 @@ import theme from './config/theme';
 import SideNav from './components/SideNav';
 import Header from './components/Header';
 import { ProSidebarProvider } from 'react-pro-sidebar';
+import { BrowserRouter } from 'react-router-dom';
+import AppRoutes from './router/AppRoutes';
 
 function App() {
 
@@ -24,11 +26,13 @@ function App() {
           <Header />
 
           <Box sx={styles.container}>
-            <SideNav />
+            <BrowserRouter>
+              <SideNav />
 
-            <Box component={'main'} sx={styles.mainSection}>
-
-            </Box>
+              <Box component={'main'} sx={styles.mainSection}>
+                <AppRoutes />
+              </Box>
+            </BrowserRouter>
           </Box>
         </ProSidebarProvider>
       </ThemeProvider>

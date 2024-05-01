@@ -7,3 +7,11 @@
 body, html, :root {
   height: 100%;
 }
+
+.MuiButtonBase-root:hover {
+  background-color: #eae6e6 !important;
+}
+
+.MuiButtonBase-root[active="true"] {
+  background-color: #eae6e6;
+}
