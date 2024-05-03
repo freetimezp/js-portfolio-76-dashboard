@@ -262,7 +262,7 @@ const styles = {
         mb: 2,
     },
     columnsContainer: {
-        columns: "280px 3",
+        columns: "320px 3",
         maxWidth: 1400,
     },
     item: {
