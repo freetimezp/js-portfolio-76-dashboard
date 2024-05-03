@@ -47,7 +47,7 @@ const styles = {
     height: "calc(100vh - 64px)"
   },
   mainSection: {
-    p: 1,
+    p: 4,
     width: '100%',
     height: '100%',
     overflow: 'auto'
