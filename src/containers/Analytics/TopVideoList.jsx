@@ -1,38 +1,42 @@
 import { Box, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material";
 
+import video1Img from "../../assets/images/video-1.jpg";
+import video2Img from "../../assets/images/video-2.jpg";
+import video3Img from "../../assets/images/video-3.jpg";
+
 const rows = [
     {
-        thumbnail: 'src/assets/images/video-1.jpg',
+        thumbnail: video1Img,
         name: 'Title 1',
         averageViewDuration: '2:25 (41.00%)',
         views: 2567
     },
     {
-        thumbnail: 'src/assets/images/video-2.jpg',
+        thumbnail: video2Img,
         name: 'Title 2',
         averageViewDuration: '17:45 (27.05%)',
         views: 1541
     },
     {
-        thumbnail: 'src/assets/images/video-3.jpg',
+        thumbnail: video3Img,
         name: 'Title 3',
         averageViewDuration: '31:40 (20.41%)',
         views: 3528
     },
     {
-        thumbnail: 'src/assets/images/video-1.jpg',
+        thumbnail: video1Img,
         name: 'Title 4',
         averageViewDuration: '07:45 (12.42%)',
         views: 2857
     },
     {
-        thumbnail: 'src/assets/images/video-2.jpg',
+        thumbnail: video2Img,
         name: 'Title 5',
         averageViewDuration: '41:00 (37.95%)',
         views: 9852
     },
     {
-        thumbnail: 'src/assets/images/video-3.jpg',
+        thumbnail: video3Img,
         name: 'Title 6',
         averageViewDuration: '12:10 (35.75%)',
         views: 2158

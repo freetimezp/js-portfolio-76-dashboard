@@ -8,6 +8,11 @@ import { DataGrid } from "@mui/x-data-grid";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import AttachMoneyOutlinedIcon from "@mui/icons-material/AttachMoneyOutlined";
 
+import ideaImg from "../../assets/images/idea.jpg";
+import thumbnail2Img from "../../assets/images/thumbnail2.jpg";
+import thumbnailImg from "../../assets/images/thumbnail.jpg";
+
+
 const columns = [
     {
         field: 'thumbnail',
@@ -84,7 +89,7 @@ const columns = [
 const videos = [
     {
         id: 1,
-        thumbnail: 'src/assets/images/idea.jpg',
+        thumbnail: ideaImg,
         visibility: 'Public',
         monetization: 'On',
         views: 100,
@@ -92,7 +97,7 @@ const videos = [
     },
     {
         id: 2,
-        thumbnail: 'src/assets/images/thumbnail2.jpg',
+        thumbnail: thumbnail2Img,
         visibility: 'Public',
         monetization: 'On',
         views: 100,
@@ -103,7 +108,7 @@ const videos = [
 const posts = [
     {
         id: 1,
-        thumbnail: 'src/assets/images/thumbnail.jpg',
+        thumbnail: thumbnailImg,
         visibility: 'Public',
         monetization: 'On',
         views: 345,
@@ -111,7 +116,7 @@ const posts = [
     },
     {
         id: 2,
-        thumbnail: 'src/assets/images/idea.jpg',
+        thumbnail: ideaImg,
         visibility: 'Public',
         monetization: 'On',
         views: 5,
@@ -119,7 +124,7 @@ const posts = [
     },
     {
         id: 3,
-        thumbnail: 'src/assets/images/thumbnail2.jpg',
+        thumbnail: thumbnail2Img,
         visibility: 'Public',
         monetization: 'On',
         views: 47,
@@ -130,7 +135,7 @@ const posts = [
 const playlist = [
     {
         id: 1,
-        thumbnail: 'src/assets/images/thumbnail.jpg',
+        thumbnail: thumbnailImg,
         visibility: 'Public',
         monetization: 'On',
         views: 100,
