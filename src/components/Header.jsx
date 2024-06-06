@@ -14,6 +14,7 @@ const Header = () => {
             <Toolbar>
                 <IconButton
                     color="secondary"
+                    sx={styles.headerIcon}
                     onClick={() => broken ? toggleSidebar() : collapseSidebar()}
                 >
                     <MenuTwoToneIcon />
@@ -25,16 +26,16 @@ const Header = () => {
 
                 <Box sx={{ flexGrow: 1 }} />
 
-                <IconButton title="Notifications" color="secondary">
+                <IconButton title="Notifications" color="secondary" sx={styles.headerIcon}>
                     <Badge badgeContent={14} color="primary">
                         <NotificationsIcon />
                     </Badge>
                 </IconButton>
 
-                <IconButton title="Settings" color="secondary">
+                <IconButton title="Settings" color="secondary" sx={styles.headerIcon}>
                     <SettingsIcon />
                 </IconButton>
-                <IconButton title="Logout" color="secondary">
+                <IconButton title="Logout" color="secondary" sx={styles.headerIcon}>
                     <LogoutIcon />
                 </IconButton>
             </Toolbar>
@@ -43,6 +44,11 @@ const Header = () => {
 }
 
 const styles = {
+    headerIcon: {
+        "&:hover": {
+            color: "#000",
+        }
+    },
     appBar: {
         bgcolor: 'neutral.main'
     },
